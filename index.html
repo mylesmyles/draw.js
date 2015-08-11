@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>SketchpadJS</title>
+		<meta name="A sketchpad written in Javascript" content="SketchpadJS">
+		<meta name="Myles Putnam">
+
+		<link rel="stylesheet" href="css/style.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="js/jscolor.js"></script>
+		<script src="js/sketchpad.js"></script>
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div id="sketchpadContainer">
+
+			<div id="sketchpadCanvases">
+				<canvas id="sketchpad0" class="sketchpad" width="512" height="512"></canvas>
+				<canvas id="sketchpad1" class="sketchpad" width="512" height="512"></canvas>
+				<canvas id="sketchpad2" class="sketchpad" width="512" height="512"></canvas>
+			</div>
+				<!-- <div id="sketchpadControls"> -->
+
+			<div id="sideList">
+				<ul class="pictureList">
+					<li><a class="selected selectable" href = "javascript:;" id="penTool"><img src="graphics/pen.png" alt="Pen tool" title="Pen tool" class="selectable"></a></li>
+					<li><a class="selectable" href = "javascript:;" id="lineTool"><img src="graphics/line.png" alt="Line tool" title="Line tool" class="selectable"></a></li>
+					<li><a class="selectable" href = "javascript:;" id="eraserTool"><img src="graphics/eraser.png" alt="Eraser" title="Eraser" class="selectable"></a></li>
+					<li><a class="selectable" href = "javascript:;" id="gridTool"><img src="graphics/grid.png" alt="Grid tool" title="Grid tool"></a></li>
+					<li><a class="selectable" href = "javascript:;" id="bucketTool"><img src="graphics/bucket.png" alt="Paint Bucket tool" title="Paint Bucket tool"></a></li>
+					<li><a href = "javascript:;" id="shapes"><img src="graphics/shapes.png" alt="Shape tools" title="Shape tools"></a></li>
+					<li class="spacerMain"><a href = "javascript:;" id="redo"><img src="graphics/redo.png" alt="Redo" title="Redo"></a></li>
+					<li><a href = "javascript:;" id="undo"><img src="graphics/undo.png" alt="Undo" title="Undo"></a></li>
+					<li><a href = "javascript:;" id="clearSketchpad"><img src="graphics/clear.png" alt="Clear" title="Clear"></a></li>
+				</ul>
+			</div>
+
+			<div id="shapeList" class="spacerShapes">
+				<ul class="pictureList">
+					<li><a class="selectable" href = "javascript:;" id="ellipseTool"><img src="graphics/ellipse.png" alt="Oval tool" title="Oval tool"></a></li>
+					<li><a class="selectable" href = "javascript:;" id="circleTool"><img src="graphics/circle.png" alt="Circle tool" title="Circle tool"></a></li>
+					<li><a class="selectable" href = "javascript:;" id="rectangleTool"><img src="graphics/rectangle.png" alt="Rectangle tool" title="Rectangle tool"></a></li>
+					<li><a class="selectable" href = "javascript:;" id="squareTool"><img src="graphics/square.png" alt="Square tool" title="Square tool"></a></li>
+					<li><input type="checkbox" name="filled" id="filled"><br/><label for="filled">Filled</label></li>
+				</ul>
+			</div>
+
+			<div id="afterContent">
+				<input id="colorPicker" class="color colorSelector" value="000000">
+				<ul id="colorContainer" class="horizList"></ul>
+				<div id="colorHistoryTitle">Color History:</div>
+				<ul id="colorHistoryContainer" class="horizList">
+				<li><a href="javascript:;" class="colorHistorySelector" id="colorHistory1" num="1" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory2" num="2" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory3" num="3" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory4" num="4" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory5" num="5" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory6" num="6" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory7" num="7" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory8" num="8" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory9" num="9" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory10" num="10" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory11" num="11" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory12" num="12" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory13" num="13" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory14" num="14" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory15" num="15" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory16" num="16" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory17" num="17" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory18" num="18" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li><li><a href="javascript:;" class="colorHistorySelector" id="colorHistory19" num="19" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</a></li></ul>
+				<div id="transparencyContainer">
+				<div class="floatLeft smallPad">Transparency:</div>
+				<div class="floatLeft smallPad" for="alpha">100%</div><input type="range" class="slider" id="alpha" min="1" max="100" value="100" step="1">
+				</div>
+
+				<div id="sizeContainer" class="floatLeft smallPad">Draw Size:</div><ul id="sizeContainer" class="horizList"><li><a href = "javascript:;" class="sizeSelector selectableSize" value="1">1px</a></li><li><a href = "javascript:;" class="sizeSelector selectableSize" value="2">2px</a></li><li><a href = "javascript:;" class="sizeSelector selectableSize" value="3">3px</a></li><li><a href = "javascript:;" class="sizeSelector selectableSize" value="4">4px</a></li><li><a href = "javascript:;" class="sizeSelector selectableSize" value="6">6px</a></li><li><a href = "javascript:;" class="sizeSelector selectableSize selectedSize" value="8">8px</a></li><li><a href = "javascript:;" class="sizeSelector selectableSize" value="16">16px</a></li><li><a href = "javascript:;" class="sizeSelector selectableSize" value="20">20px</a></li><li><a href = "javascript:;" class="sizeSelector selectableSize" value="32">32px</a></li><li><a href = "javascript:;" class="sizeSelector selectableSize" value="45">45px</a></li><li><a href = "javascript:;" class="sizeSelector selectableSize" value="64">64px</a></li><li><a href = "javascript:;" class="sizeSelector selectableSize" value="128">128px</a></li></ul>
+			</div>			
+		</div>
+	</body>
+</html>

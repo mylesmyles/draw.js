@@ -1,0 +1,197 @@
+#sketchpadBase{
+	/*border: 1px solid #555555;*/
+	/*position: relative;*/
+	z-index: 1
+}
+
+#sketchpadMid{
+	/*border: 1px solid #555555;*/
+	/*position: relative;*/
+	z-index: 2
+}
+#sketchpadOverlay{
+	/*border: 1px solid #555555;*/
+	/*position: relative;*/
+	z-index: 3
+}
+
+#sketchpadCanvases{
+	border: 1px solid #555555;
+	position: relative;
+	height: 512px;
+	width: 512px;
+	float: left;
+	margin-top: 3px;
+}
+
+.sketchpad{
+	position:absolute;
+    left:0px;
+    top:0px;
+
+}
+
+/*Bottom layer
+    canvas id="layer1" 
+    style="z-index: 1;
+    
+Middle layer    
+    canvas id="layer2" 
+    style="z-index: 2;
+
+Top Layer    
+    canvas id="layer3" 
+    style="z-index: 3;  */
+
+#sketchpadContainer{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	padding-top: 4px;
+	padding-left: 4px;
+	background-color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.horizList li{
+	display: inline-block;
+	padding: 4px;
+}
+
+.slider{
+	width: 250px;
+}
+
+#colorContainer{
+	margin-bottom: 0px;
+}
+
+#colorPicker{
+	width: 80px;
+	height: 15px;
+	margin-top: 3px;
+	float: left;
+	margin-right: 15px;
+}
+
+#sideList{
+	float: left;
+	padding-top: 0;
+}
+
+#shapeList{
+	float:left;
+}
+
+#shapeList ul{
+	background-color: #BCD2D4;
+	padding-left: 0;
+}
+
+#sideList li{
+	padding-top: 3px;
+	padding-left: 3px;
+	padding-bottom: 0;
+}
+
+#afterContent{
+	float: none;
+	clear: left;
+	font-size: 15px;
+}
+
+.spacerMain{
+	margin-top: 62px;
+}
+
+.spacerShapes{
+	margin-top: 255px;
+}
+
+.shapesSelected{
+	background-color: #BCD2D4;
+}
+
+.pictureList {
+	list-style-type: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 4px;
+}
+
+.pictureList img{
+	border-style: solid;
+	border-width: 2px;
+	border-color: #000000;
+}
+
+.pictureList li{
+	padding: 3px;
+}
+
+.selected img{
+	border-color: #FF9900;
+}
+
+.colorSelector{
+	text-decoration: none;
+	border-color: #000000;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.colorHistorySelector{
+	text-decoration: none;
+	border-color: #000000;
+	border-style: solid;
+	border-width: 1px;
+}
+
+#colorHistoryTitle{
+	float: left;
+	margin-top: 3px;
+	margin-right: 7px;
+}
+
+#colorHistoryContainer{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.floatLeft{
+	float: left;
+}
+
+.smallPad{
+	padding-right: 6px;
+}
+
+#transparencyContainer{
+	margin-top: 5px;
+	margin-bottom: 3px;
+}
+
+#sizeContainer{
+	margin-top: 0px;
+}
+
+.selectedSize{
+	color: #C75F10 !important;
+}
+
+#sizeContainer a{
+	text-decoration: none;
+	color: #1002D6;
+}
+
+#sizeContainer li{
+	padding-top: 0;
+}
+
+.pictureList img{
+	width: 40px;
+	height: 40px;
+}
